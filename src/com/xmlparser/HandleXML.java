@@ -85,4 +85,49 @@ public class HandleXML {
         return node;
     }
     //Update part
+
+    public static void addElement(Document doc) {
+        NodeList employees = doc.getElementsByTagName("Employee");
+        Element emp = null;
+
+        for(int i=0; i<employees.getLength();i++){
+            emp = (Element) employees.item(i);
+            Element salaryElement = doc.createElement("salary");
+            salaryElement.appendChild(doc.createTextNode("10000"));
+            emp.appendChild(salaryElement);
+        }
+    }
+    public static void deleteElement(Document doc) {
+        NodeList employees = doc.getElementsByTagName("Employee");
+        Element emp = null;
+        for(int i=0; i<employees.getLength();i++){
+            emp = (Element) employees.item(i);
+            Node genderNode = emp.getElementsByTagName("permanent").item(0);
+            emp.removeChild(genderNode);
+        }
+
+    }
+    public static void updateElementValue(Document doc) {
+        NodeList employees = doc.getElementsByTagName("Employee");
+        Element emp = null;
+        for(int i=0; i<employees.getLength();i++){
+            emp = (Element) employees.item(i);
+            Node name = emp.getElementsByTagName("name").item(0).getFirstChild();
+            name.setNodeValue(name.getNodeValue().toUpperCase());
+        }
+    }
+
+    public static void updateAttributeValue(Document doc) {
+        NodeList employees = doc.getElementsByTagName("Employee");
+        Element emp = null;
+        for(int i=0; i<employees.getLength();i++){
+            emp = (Element) employees.item(i);
+            String gender = emp.getElementsByTagName("permanent").item(0).getFirstChild().getNodeValue();
+            if(gender.equalsIgnoreCase("true")){
+                emp.setAttribute("id", "T"+emp.getAttribute("id"));
+            }else{
+                emp.setAttribute("id", "F"+emp.getAttribute("id"));
+            }
+        }
+    }
 }
