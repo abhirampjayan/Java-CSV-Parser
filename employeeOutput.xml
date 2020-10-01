@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Employees>
+    <Employee id="1">
+        <name>Pankaj</name>
+        <age>29</age>
+        <role>Java Developer</role>
+        <permanent>true</permanent>
+    </Employee>
+    <Employee id="2">
+        <name>Pankaj</name>
+        <age>29</age>
+        <role>Java Developer</role>
+        <permanent>true</permanent>
+    </Employee>
+</Employees>
