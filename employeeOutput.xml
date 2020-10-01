@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Employees>
-    <Employee id="1">
-        <name>Pankaj</name>
+        
+    <Employee id="T1">
+                
+        <name>PANKAJ</name>
+                
         <age>29</age>
+                
         <role>Java Developer</role>
-        <permanent>true</permanent>
+                
+    
+        <salary>10000</salary>
     </Employee>
-    <Employee id="2">
-        <name>Pankaj</name>
+        
+    <Employee id="T2">
+                
+        <name>PANKAJ</name>
+                
         <age>29</age>
+                
         <role>Java Developer</role>
-        <permanent>true</permanent>
+                
+    
+        <salary>10000</salary>
     </Employee>
+    
 </Employees>
